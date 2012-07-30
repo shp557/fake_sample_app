@@ -15,4 +15,11 @@
 //= require bootstrap
 //= require bootstrap-tooltip
 //= require bootstrap-popover
+//= require bootstrap-datepicker
+//= require bootstrap-timepicker
 //= require_tree .
+
+$(function () {
+  $('.datepicker').datepicker();
+});
+

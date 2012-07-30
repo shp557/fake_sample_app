@@ -5,12 +5,13 @@
     Connecting you to live, on-campus events.
   </h2>
 
-  <p>
-    <script>
+  
+  <script>
     $(function () {
-        $('.pinimage').popover({ html : true });
+      $('.pinimage').popover({ html : true });
     });
   </script>
+  <p>
     <%= link_to "View", microposts_path, class: "btn btn-large btn-primary myButton pinimage", title: "View", data: { content: "View real-time, on-campus events."}%>
   </p>
   <p>

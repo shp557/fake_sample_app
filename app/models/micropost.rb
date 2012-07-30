@@ -1,5 +1,5 @@
 class Micropost < ActiveRecord::Base
-  attr_accessible :content, :date
+  attr_accessible :content, :date, :event
   
   belongs_to :user 
 
