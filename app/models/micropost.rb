@@ -1,11 +1,13 @@
 class Micropost < ActiveRecord::Base
-  attr_accessible :content, :date, :event, :start_time, :end_time
+  attr_accessible :content, :date, :event, :start_time, :end_time, 
+  				  :description, :location
   
   belongs_to :user 
 
   validates :user_id, presence: true
   validates :content, presence: true, length: { maximum: 140 }
   validates :date, presence: true
+  validates :location, presence: true
   validates :start_time, presence: true
   validates :end_time, presence: true
 

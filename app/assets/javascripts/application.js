@@ -16,8 +16,13 @@
 //= require bootstrap-tooltip
 //= require bootstrap-popover
 //= require bootstrap-datepicker
+//= require bootstrap-timepicker
 //= require_tree .
 
 $(function () {
-  $('.datepicker').datepicker();
+  $('.datepicker').datepicker({"format": "yy-mm-dd", "weekStart": 1, "autoclose": true});
+});
+
+$(function () {
+  $('.timepicker').timepicker({"template": "modal"});
 });

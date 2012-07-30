@@ -1,5 +1,5 @@
 class AddDateToMicroposts < ActiveRecord::Migration
   def change
-    add_column :microposts, :date, :datetime
+    add_column :microposts, :date, :string
   end
 end
