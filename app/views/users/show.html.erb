@@ -1,10 +1,19 @@
-<% provide(:title, @user.name) %>
 <div class="row">
   <aside class="span4">
     <section>
       <h1>
         <%= @user.name %>
       </h1>
+      <a href="<%= post_path(current_user) %>">Post an event.</a>
     </section>
   </aside>
+  <div class="span8">
+    <% if @user.microposts.any? %>
+      <h3>My Posts (<%= @user.microposts.count %>)</h3>
+      <ol class="microposts">
+        <%= render @microposts %>
+      </ol>
+      <%= will_paginate @microposts %>
+    <% end %>
+  </div>
 </div>

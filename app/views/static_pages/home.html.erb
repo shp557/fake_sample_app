@@ -6,15 +6,15 @@
   </h2>
 
   <p>
-  	<script>
-	  $(function () {
+    <script>
+    $(function () {
         $('.pinimage').popover({ html : true });
-	  });
-	</script>
-  	<%= link_to "View", signup_path, class: "btn btn-large btn-primary myButton pinimage", title: "View", data: { content: "View real-time, on-campus events."}%>
+    });
+  </script>
+    <%= link_to "View", signup_path, class: "btn btn-large btn-primary myButton pinimage", title: "View", data: { content: "View real-time, on-campus events."}%>
   </p>
   <p>
-  	<%= link_to "Post", signin_path, class: "btn btn-large btn-primary myButton pinimage", title: "Post", data: { content: "Add your own events. Sign in required."}%>
+    <%= link_to "Post", post_path, class: "btn btn-large btn-primary myButton pinimage", title: "Post", data: { content: "Add your own events. Sign in required."}%>
   </p>
 
 </div>
