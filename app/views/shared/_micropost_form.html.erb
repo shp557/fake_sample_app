@@ -2,8 +2,10 @@
   <%= render 'shared/error_messages', object: f.object %>
 
   <div class="field">
+
     <%= f.label :"date of event"%>
-    <%= f.text_field :date, class: "datepicker"%>
+    <%= f.text_field :date, class: 'datepicker', data_date: Time.now%>
+    
 
     <%= f.label :"Event category"%>
     <%= f.select :event, [['Hot','hot'],['Medium','medium'],['Cold','cold']] %>
