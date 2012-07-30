@@ -7,6 +7,7 @@ SampleApp::Application.routes.draw do
 
   match '/signup', to: 'users#new'
   match '/post', to: 'microposts#new'
+  match '/microposts', to: 'microposts#show'
   match '/signin',  to: 'sessions#new'
   match '/signout', to: 'sessions#destroy', via: :delete
   match '/home', to: 'static_pages#home'

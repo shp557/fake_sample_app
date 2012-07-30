@@ -4,7 +4,9 @@
       <h1>
         <%= @user.name %>
       </h1>
-      <a href="<%= post_path(current_user) %>">Post an event.</a>
+      <div>
+      	<%= link_to "Post an event", microposts_path, class: "btn btn-large btn-primary other_button"%>
+  	  </div>
     </section>
   </aside>
   <div class="span8">
