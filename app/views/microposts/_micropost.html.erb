@@ -1,14 +1,23 @@
-<li>
-  <span class="content"><%= micropost.content %></span>
-  <!--<span class="timestamp">
-    Posted <%= time_ago_in_words(micropost.created_at) %> ago.
-  </span>-->
-  <span class="timestamp"><%= micropost.start_time%></span>
-  <span class="timestamp"><%= micropost.end_time%></span>
-  <span class="content"><%= micropost.location%></span>
-  <% if current_user?(micropost.user) %>
-    <%= link_to "delete", micropost, method: :delete,
-                                     data: { confirm: "You sure?" },
-                                     title: micropost.content %>
-  <% end %>
-</li>
+<tr>
+  <th>
+  	<span class="event">
+      <%= micropost.content%>
+    <span>
+  </th>
+  <th>
+  	<span class="timestamp">
+  	  <%= micropost.date.strftime("%A, %b %-d")%>
+  	</span>
+  </th>
+  <th>
+  	<span class="timestamp">
+  	  <%= micropost.start_time.strftime("%-I:%M %p")%>
+    </span>
+  </th>
+  <th>
+    <span class="timestamp">
+  	  <%= micropost.end_time.strftime("%-I:%M %p") %>
+    </span>
+  </th>
+  <th><%= micropost.location%></th>
+<tr>

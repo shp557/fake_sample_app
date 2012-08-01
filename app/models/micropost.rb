@@ -1,6 +1,6 @@
 class Micropost < ActiveRecord::Base
   attr_accessible :content, :date, :event, :start_time, :end_time, 
-  				  :description, :location
+  				  :description, :location, :time_start
   
   belongs_to :user 
 

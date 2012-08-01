@@ -1,13 +1,11 @@
 <%= form_for(@micropost) do |f| %>
   <%= render 'shared/error_messages', object: f.object %>
-
   <div class="field">
-
     <%= f.label :"event"%>
     <%= f.text_field :content, placeholder: "Event listing..."%>
 
     <%= f.label :"event category"%>
-    <%= f.select :event, [['Hot','hot'],['Medium','medium'],['Cold','cold']]%>
+    <%= f.select :event, [['General','general'],['Lecture','lecture'],['Sports','sports']]%>
 
     <%= f.label :"location"%>
     <%= f.text_field :location, placeholder: "Where is this event?"%>
@@ -23,7 +21,6 @@
 
     <%= f.label :"event description"%>
     <%= f.text_area :description, placeholder: "Enter description (optional)..."%>
-
   </div>
   <%= f.submit "Post", class: "btn btn-large btn-primary" %>
 <% end %>

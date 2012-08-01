@@ -7,7 +7,7 @@ class MicropostsController < ApplicationController
   end
 
   def show
-  	@microposts = Micropost.all
+  	@microposts = Micropost.all 
   end
 
   def create

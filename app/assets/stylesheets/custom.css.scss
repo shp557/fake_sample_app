@@ -203,6 +203,11 @@ input, textarea, select, .uneditable-input {
 }
 .timestamp {
   color: $grayLight;
+  font-weight: normal;
+}
+.event {
+  display: block;
+  font-weight: normal;
 }
 aside {
   textarea {

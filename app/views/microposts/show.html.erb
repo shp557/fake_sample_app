@@ -1,8 +1,17 @@
 <% provide(:title, 'Events') %>
 <h1>Events</h1>
 
-<ul class="microposts">
-  <li>
-  	<%= render @microposts %>
-  </li>
-</ul>
+<table class="table">  
+  <thead>  
+    <tr>  
+      <th>Event</th>  
+      <th>Date</th>
+      <th>Start time</th>  
+      <th>End time</th>  
+      <th>Location</th>
+    </tr>
+  </thead>
+  <tbody>
+    <%= render @microposts %>
+  </tbody>
+</table>
