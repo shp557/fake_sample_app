@@ -1,23 +1,32 @@
-<tr>
-  <th>
-  	<span class="event">
-      <%= micropost.content%>
-    <span>
-  </th>
-  <th>
-  	<span class="timestamp">
-  	  <%= micropost.date.strftime("%A, %b %-d")%>
-  	</span>
-  </th>
-  <th>
-  	<span class="timestamp">
-  	  <%= micropost.start_time.strftime("%-I:%M %p")%>
-    </span>
-  </th>
-  <th>
-    <span class="timestamp">
-  	  <%= micropost.end_time.strftime("%-I:%M %p") %>
-    </span>
-  </th>
-  <th><%= micropost.location%></th>
-<tr>
+<% if (micropost.start_time-Time.now.utc.getlocal).abs <= 3600 %>
+  <tr>
+    <th>
+    	<span class="event">
+        <%= micropost.content%>
+      <span>
+    </th>
+    <th>
+    	<span class="timestamp">
+    	  <%= micropost.date.strftime("%A, %b %-d")%>
+    	</span>
+    </th>
+    <th>
+    	<span class="timestamp">
+    	  <%= micropost.start_time.strftime("%-I:%M %p")%>
+      </span>
+    </th>
+    <th>
+      <span class="timestamp">
+    	  <%= micropost.end_time.strftime("%-I:%M %p") %>
+      </span>
+    </th>
+    <th><%= micropost.location%></th>
+  <tr>
+<% else %>
+  <tr>
+  	<th><%= micropost.start_time %></th>
+    <th><%= micropost.end_time %></th>
+    <th><%= Time.now.utc.getlocal %></th>
+    <th><%= micropost.start_time-Time.now.utc.getlocal %></th>
+  </tr>
+<% end %>

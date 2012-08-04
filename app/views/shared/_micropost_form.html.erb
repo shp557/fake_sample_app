@@ -10,11 +10,14 @@
     <%= f.label :"location"%>
     <%= f.text_field :location, placeholder: "Where is this event?"%>
 
-    <%= f.label :"date of event"%>
+    <%= f.label :"start date"%>
     <%= f.text_field :date, class: 'datepicker', placeholder: "Enter date..."%>
 
     <%= f.label :"start time"%>
     <%= f.text_field :start_time, class: 'timepicker'%>
+
+    <%= f.label :"end date"%>
+    <%= f.text_field :end_date, class: 'datepicker', placeholder: "Enter date..."%>
 
     <%= f.label :"end time"%>
     <%= f.text_field :end_time, class: 'timepicker'%>
