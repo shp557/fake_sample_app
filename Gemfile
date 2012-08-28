@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'rails', '3.2.6'
-gem 'bootstrap-sass', '2.0.0'
+gem 'bootstrap-sass', '2.0.4.0'
 gem 'bcrypt-ruby', '3.0.1'
 gem 'faker', '1.0.1'
 gem 'will_paginate', '3.0.3'
@@ -10,6 +10,9 @@ gem 'bootstrap-datepicker-rails', '0.6.16'
 gem 'bootstrap-timepicker-rails'
 gem 'less-rails'
 gem 'therubyracer'
+gem 'bootswatch-rails'
+gem 'less-rails-fontawesome', :group => :assets
+gem 'feedzirra'
 
 group :development, :test do
   gem 'sqlite3', '1.3.5'

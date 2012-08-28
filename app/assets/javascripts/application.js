@@ -26,3 +26,7 @@ $(function () {
 $(function () {
   $('.timepicker').timepicker({"template": "modal"});
 });
+
+$(function() {
+  $('table').table('show');
+});

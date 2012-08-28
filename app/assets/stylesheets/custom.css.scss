@@ -1,4 +1,15 @@
+@import "bootswatch/spacelab/variables";
+
 @import "bootstrap";
+@import 'fontawesome';
+
+body {
+  padding-top: 60px;
+}
+
+@import "bootstrap-responsive";
+
+@import "bootswatch/spacelab/bootswatch";
 
 /* mixins, variables, etc. */
 
@@ -16,10 +27,6 @@ html {
   overflow-y: scroll;
 }
 
-body {
-  padding-top: 60px;
-}
-
 section {
   overflow: auto;
 }
@@ -33,6 +40,14 @@ textarea {
   h1 {
     margin-bottom: 10px;
   }
+}
+
+.hero-unit h1 {
+  letter-spacing: -2px;
+}
+
+.hero-unit {
+  background-color: #E4E7EB;
 }
 
 /* typography */
@@ -49,12 +64,12 @@ h1 {
 }
 
 h2 {
-  font-size: 1.7em;
+  font-size: 1.5em;
   letter-spacing: -1px;
   margin-bottom: 30px;
   text-align: center;
-  font-weight: normal;
-  color: $grayLight;
+  font-weight: 300;
+  color: $gray;
 }
 
 p {
@@ -62,23 +77,28 @@ p {
   line-height: 1.7em;
 }
 
-
 /* header */
 
 #logo {
   float: left;
   margin-right: 10px;
   font-size: 1.6em;
-  color: white;
+  color: $grayLight;
   letter-spacing: -1px;
   padding-top: 9px;
-  font-weight: regular;
+  font-weight: 400;
   line-height: 1;
   &:hover {
-    color: white;
+    color: $grayDarker;
     text-decoration: none;
   }
 }
+
+/*
+.navbar-inner {
+  background: black;
+}
+*/
 
 /* footer */
 
@@ -117,12 +137,13 @@ footer {
 }
 
 .myButton {
-    width: 100px;
+    width: 100px !important;
 }
 
 .other_button {
-    margin-top: 20px;
+  margin-top: 20px;
 }
+
 
 /* sidebar */
 
@@ -156,8 +177,8 @@ input, textarea, select, .uneditable-input {
   padding: 10px;
   height: auto;
   margin-bottom: 15px;
-  @include box_sizing;
 }
+
 
 #error_explanation {
   color: #f00;

@@ -1,32 +1,30 @@
 <% if true or (micropost.start_time-Time.now.utc.getlocal).abs <= 3600 %>
-  <tr>
-    <th>
+  <tr data-toggle="collapse" data-target="#check">
+    <td>
     	<span class="event">
         <%= micropost.content%>
       <span>
-    </th>
-    <th>
+    </td>
+    <td>
     	<span class="timestamp">
     	  <%= micropost.date.strftime("%A, %b %-d")%>
     	</span>
-    </th>
-    <th>
+    </td>
+    <td>
     	<span class="timestamp">
     	  <%= micropost.start_time.strftime("%-I:%M %p")%>
       </span>
-    </th>
-    <th>
+    </td>
+    <td>
       <span class="timestamp">
     	  <%= micropost.end_time.strftime("%-I:%M %p") %>
       </span>
-    </th>
-    <th><%= micropost.location%></th>
-  <tr>
-<% else %>
-  <tr>
-  	<th><%= micropost.start_time %></th>
-    <th><%= micropost.end_time %></th>
-    <th><%= Time.now.utc.getlocal %></th>
-    <th><%= micropost.start_time-Time.now.utc.getlocal %></th>
+    </td>
+    <td><%= micropost.location%></td>
   </tr>
+  <tr>
+    <div id="check" class="collapse">
+        <p>Oh my gosh it works.Oh my gosh it works.Oh my gosh it works.Oh my gosh it works.Oh my gosh it works.</p>
+      </div>
+  </tr>  
 <% end %>

@@ -1,30 +1,33 @@
 <header class="navbar navbar-fixed-top">
   <div class="navbar-inner">
-    <div class="container">
-      <%= link_to "harvardpulse", root_path, id: "logo" %>
-      <nav>
+    <div class="container-fluid">
+      <%= link_to "harvardpulse", root_path, class: "brand", id: "logo" %>
+      <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </a>
+      <div class="nav-collapse">
         <ul class="nav pull-right">
-          <li><%= link_to "Home", root_path %></li>
+          <li><%= ilink_to "home", "Home", root_path %></li>
           <% if signed_in? %>
-            <li><%= link_to "Events", microposts_path %></li>
+            <li><%= ilink_to "calendar", "Events", microposts_path %></li>
             <li id="fat-menu" class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-folder-open"></i>
                 Account <b class="caret"></b>
               </a>
               <ul class="dropdown-menu">
-                <li><%= link_to "Profile", current_user %></li>
-                <li><%= link_to "Settings", edit_user_path(current_user) %></li>
+                <li><%= ilink_to "user", "Profile", current_user %></li>
+                <li><%= ilink_to "cog", "Settings", edit_user_path(current_user) %></li>
                 <li class="divider"></li>
-                <li>
-                  <%= link_to "Sign out", signout_path, method: "delete" %>
-                </li>
+                <li><%= ilink_to "pencil", "Sign out", signout_path, method: :delete %></li>
               </ul>
             </li>
           <% else %>
-            <li><%= link_to "Sign in", signin_path %></li>
+            <li><a href=<%= signin_path %>><i class="icon-pencil"></i>&nbsp;Sign in</a></li>
           <% end %>
         </ul>
-      </nav>
+      </div>
     </div>
   </div>
 </header>

@@ -1,6 +1,6 @@
 <div class="center hero-unit">
-  <h1>Harvard<font color="#92A0AD">Pulse</font></h1>
-
+  <h1>harvard<font color="#A0ACB8">pulse</font></h1>
+  <!--<%= image_tag("pulse.png", alt: "HarvardPulse")%>-->
   <h2>
     Connecting you to live, on-campus events.
   </h2>
@@ -12,10 +12,9 @@
     });
   </script>
   <p>
-    <%= link_to "View", microposts_path, class: "btn btn-large btn-primary myButton pinimage", title: "View", data: {content: "View real-time, on-campus events."}%>
+    <a class="btn btn-large btn-primary myButton" href=<%= microposts_path %>><i class="icon-calendar"></i>&nbsp;&nbsp;View</a>
   </p>
   <p>
-    <%= link_to "Post", post_path, class: "btn btn-large btn-primary myButton pinimage", title: "Post", data: { content: "Add your own events. Sign in required."}%>
-  </p>
+    <a class="btn btn-large btn-primary myButton" href=<%= post_path %>><i class="icon-plus"></i>&nbsp;&nbsp;Post</a>
 
 </div>
